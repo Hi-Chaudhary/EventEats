@@ -36,6 +36,7 @@
 <h2 class="mb-4">Published Events</h2>
 
 <div class="row">
+    {% if event in published_events %}
     {% for event in published_events %}
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
@@ -55,6 +56,7 @@
     {% empty %}
         <p>No published events yet.</p>
     {% endfor %}
+    {%endif%}
 </div>
 
 {% endblock %}
